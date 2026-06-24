@@ -1,0 +1,257 @@
+.contact-partial-d33d06 {
+    background: $text_white;
+    overflow: hidden;
+    padding: 112px 0;
+    position: relative;
+    @media(max-width:768px){
+        padding: 76px 0;
+    }
+    .section-bignum {
+        position: absolute;
+        font-family: $playfair;
+        font-style: italic;
+        font-size: clamp(180px, 22vw, 320px);
+        font-weight: 700;
+        color: $verde-100;
+        opacity: .55;
+        line-height: .85;
+        pointer-events: none;
+        user-select: none;
+        z-index: 0;
+        letter-spacing: -.03em;
+        opacity: 1;
+    }
+    .wrap {
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 56px;
+            align-items: start;
+            margin-top: 48px;
+            position: relative;
+            z-index: 1;
+            @media(max-width: 1024px) {
+                grid-template-columns: 1fr;
+            }
+            // Title
+            .form-h3 {
+                font-family: $playfair;
+                font-size: 28px;
+                font-weight: 700;
+                color: $verde-900;
+                margin-bottom: 6px;
+                letter-spacing: -.01em;
+            }
+            .form-sub {
+                font-size: 13px;
+                color: $text_marron;
+                margin-bottom: 32px;
+            }
+            .form-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 14px;
+                width: 724px;
+                max-width: 100%;
+                @media(max-width: 768px) {
+                    grid-template-columns: 1fr;
+                    width: 100%;
+                }
+                .fg {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    .fl {
+                        font-size: 11px;
+                        font-weight: 600;
+                        letter-spacing: .5px;
+                        color: $text_marron;
+                        text-transform: uppercase;
+                    }
+                    .fi, .fs, .ft {
+                        font-family: 'Inter', sans-serif;
+                        font-size: 15px;
+                        color: $text_dark;
+                        background: $white;
+                        border: 1.5px solid $verde-200;
+                        border-radius: 6px;
+                        padding: 12px 15px;
+                        outline: none;
+                        transition: border-color .2s, box-shadow .2s;
+                        -webkit-appearance: none;
+                        appearance: none;
+                        &::placeholder {
+                            color: #aca997;
+                        }
+                    }
+                    .fs {
+                        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath stroke='%238A8372' stroke-width='1.5' fill='none' d='m1 1 5 5 5-5'/%3E%3C/svg%3E");
+                        background-repeat: no-repeat;
+                        background-position: right 14px center;
+                        padding-right: 38px;
+                    }
+                }
+                .fg--full {
+                    grid-column: 1 / -1;
+                    .fs{
+                        width: 100%;
+                    }
+                    .ft {
+                        resize: vertical;
+                        min-height: 108px;
+                        line-height: 1.6;
+                    }
+                }
+                .btn{
+                    @include btn;
+                    max-width: max-content;
+                    background: $terra;
+                    color: $text_white;
+                    border-color: $terra;
+                    font-size: 15px;
+                    padding: 15px 32px;
+                    margin-bottom: 24px;
+                    &::after {
+                        content: ' →';
+                        transition: letter-spacing .2s;
+                        display: inline-block;
+                    }
+                    &:hover {
+                        background: $terra_2;
+                        transform: translateY(-1px);
+                        box-shadow: 0 6px 20px rgba(117, 68, 55, .28);
+                    }
+                }
+            }
+            .text-12{
+                font-size: 12px;
+                color: $text_marron;
+            }
+            .text-11{
+                grid-column: 1 / -1;
+                font-size: 11px;
+                color: $text_marron;
+            }
+        }
+        // Success message
+        #successState{
+            display: block;
+            background: $verde-50;
+            border: 1.5px solid $verde-200;
+            border-radius: 10px;
+            padding: 40px;
+            text-align: center;
+            max-width: 100%;
+            width: 724px;
+            .check{
+                font-size: 40px;
+                color: $green_dark;
+                margin-bottom: 12px;
+            }
+            .title{
+                font-family: $playfair;
+                font-size: 24px;
+                color: $verde-900;
+                margin-bottom: 8px;
+            }
+            .message{
+                font-size: 14px;
+                color: $text_marron;
+            }
+        }
+        // Contact panel
+        .contact-panel {
+            background: $bg_blue;
+            border-radius: 10px;
+            padding: 36px;
+            color: $text_white;
+            position: relative;
+            overflow: hidden;
+            &::before {
+                content: '';
+                position: absolute;
+                right: -40px;
+                top: -40px;
+                width: 160px;
+                height: 160px;
+                border-radius: 50%;
+                background: rgba(117, 68, 55, .15);
+            }
+            .contact-panel__title {
+                font-family: $playfair;
+                font-size: 22px;
+                font-weight: 700;
+                color: $text_white;
+                margin-bottom: 6px;
+                position: relative;
+            }
+            .contact-panel__sub {
+                font-size: 13px;
+                color: rgba(211, 199, 173, .55);
+                margin-bottom: 28px;
+                position: relative;
+            }
+            .c-detail {
+                padding: 15px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, .07);
+                position: relative;
+                .c-detail__label {
+                    font-size: 10px;
+                    font-weight: 700;
+                    letter-spacing: 1.8px;
+                    text-transform: uppercase;
+                    color: $areia-600;
+                    margin-bottom: 4px;
+                }
+                .c-detail__val {
+                    font-size: 14px;
+                    color: rgba(245, 243, 239, .82);
+                    line-height: 1.5;
+                    margin-bottom: 0;
+                    a{
+                        color: inherit;
+                        text-decoration: none;
+                        transition: all .2s, text-decoration .2s;
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            .promise {
+                background: rgba(255, 255, 255, .05);
+                border-radius: 6px;
+                padding: 14px 16px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                margin-top: 20px;
+                position: relative;
+                .promise-dot {
+                    width: 7px;
+                    height: 7px;
+                    background: #6EBF74;
+                    border-radius: 50%;
+                    flex-shrink: 0;
+                    animation: blink 2.5s infinite;
+                    box-shadow: 0 0 0 4px rgba(110, 191, 116, .18);
+                }
+                .promise-text {
+                    font-size: 13px;
+                    color: rgba(245, 243, 239, .65);
+                }
+            }
+        }
+    }
+}
+@keyframes blink {
+    0%{
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
+}

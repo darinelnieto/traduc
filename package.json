@@ -1,0 +1,38 @@
+{
+  "name": "sajo",
+  "version": "1.0.0",
+  "description": "sajo v1.0",
+  "main": "./js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npx webpack --mode production --watch",
+    "dev": "npx webpack --mode development",
+    "prod": "npx webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sajo-code/sajo.git"
+  },
+  "keywords": [],
+  "author": "sajo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sajo-code/sajo/issues"
+  },
+  "homepage": "https://github.com/sajo-code/sajo#readme",
+  "dependencies": {
+    "aos": "^2.3.4",
+    "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
+    "jquery": "^3.5.1",
+    "mini-css-extract-plugin": "^0.9.0",
+    "sass": "^1.83.4",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.101.3",
+    "webpack-cli": "^4.10.0"
+  }
+}

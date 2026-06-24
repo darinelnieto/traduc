@@ -1,0 +1,117 @@
+.testimonial-partial-eee8b9 {
+    background: $text_white;
+    overflow: hidden;
+    padding: 112px 0;
+    position: relative;
+    @media(max-width:768px){
+        padding: 76px 0;
+    }
+    .section-bignum {
+        position: absolute;
+        font-family: $playfair;
+        font-style: italic;
+        font-size: clamp(180px, 22vw, 320px);
+        font-weight: 700;
+        color: $verde-100;
+        opacity: .55;
+        line-height: .85;
+        pointer-events: none;
+        user-select: none;
+        z-index: 0;
+        letter-spacing: -.03em;
+    }
+    .wrap {
+        max-width: $max-width;
+        margin: 0 auto;
+        padding: 0 40px; 
+        @media(max-width:768px){
+            padding: 0 28px;
+        }
+        .testi-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+            margin-top: 52px;
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+            }
+            .testi {
+                background: $white;
+                border-radius: 10px;
+                padding: 36px 32px;
+                box-shadow: 0 1px 3px rgba(30, 28, 24, .05), 0 4px 12px rgba(30, 28, 24, .06);
+                position: relative;
+                transition: transform .3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .3s cubic-bezier(0.16, 1, 0.3, 1);
+                .testi__quote-mark {
+                    position: absolute;
+                    top: 18px;
+                    right: 22px;
+                    font-family: $playfair;
+                    font-size: 64px;
+                    font-weight: 700;
+                    color: $verde-100;
+                    line-height: 1;
+                }
+                .testi__stars {
+                    letter-spacing: 2px;
+                    font-size: 13px;
+                    color: $terra;
+                    margin-bottom: 14px;
+                    position: relative;
+                    z-index: 1;
+                }
+                .testi__text {
+                    font-family: $playfair;
+                    font-style: italic;
+                    font-size: 17px;
+                    color: $verde-900;
+                    line-height: 1.55;
+                    margin-bottom: 22px;
+                    position: relative;
+                    z-index: 1;
+                }
+                .testi__name {
+                    font-size: 13px;
+                    font-weight: 700;
+                    color: $text_dark;
+                }
+                .testi__role {
+                    font-size: 12px;
+                    color: $text_marron;
+                    margin-top: 2px;
+                }
+                .testi__badge {
+                    display: inline-block;
+                    margin-top: 14px;
+                    .chip {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 5px;
+                        font-size: 11px;
+                        font-weight: 600;
+                        letter-spacing: 1.4px;
+                        text-transform: uppercase;
+                        padding: 5px 12px;
+                        border-radius: 100px;
+                        border: 1px solid;
+                    }
+                    .chip--med {
+                        color: $medical;
+                        background: #EDF4F3;
+                        border-color: #B8D5D2;
+                    }
+                    .chip--leg {
+                        color: $legal;
+                        background: #F5EDE6;
+                        border-color: #D4B49A;
+                    }
+                    .chip--verde {
+                        color: $green_dark;
+                        background: $verde-50;
+                        border-color: $verde-200;
+                    }
+                }
+            }
+        }
+    }
+}

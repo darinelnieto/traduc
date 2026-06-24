@@ -1,0 +1,24 @@
+{
+  "editor.inlineSuggest.enabled": true,
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "strings": "on",
+    "other": "on"
+  },
+  "editor.suggestOnTriggerCharacters": true,
+  "editor.acceptSuggestionOnEnter": "on",
+  "editor.wordBasedSuggestions": "on",
+  "github.copilot.inlineSuggest.enable": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false,
+    "html": false,
+    "php": false,
+    "css": false,
+    "scss": true,
+    "less": false
+  }
+}

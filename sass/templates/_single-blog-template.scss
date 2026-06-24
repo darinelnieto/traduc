@@ -1,0 +1,14 @@
+#single-blog-template-da86d4 {
+    .blog-list-partial-aca656{
+        padding-top: 112px;
+        @media (max-width: 768px) {
+            padding-top: 70px;
+        }
+        .carousel {
+            position: relative;
+            margin-top: 0;
+            padding-bottom: 0px;
+            z-index: 5;
+        }
+    }
+}

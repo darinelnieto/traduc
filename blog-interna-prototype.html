@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Prototipo Interna Blog | Sajo Theme</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./css/main.bundle.css">
+  <style>
+    :root {
+      --bg-blue: #28374a;
+      --paper: #f5f3ef;
+      --white: #ffffff;
+      --text: #3a3829;
+      --muted: #8a8372;
+      --green: #6b6751;
+      --terra: #754437;
+      --border: #e1dbc9;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--text);
+      font-family: "Inter", sans-serif;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 100px;
+      border: 1px solid;
+    }
+    .chip--med {
+      color: #4a7e78;
+      background: #edf4f3;
+      border-color: #b8d5d2;
+    }
+    .chip--leg {
+      color: #8b5e3c;
+      background: #f5ede6;
+      border-color: #d4b49a;
+    }
+    .chip--verde {
+      color: #6b6751;
+      background: #f5f3ec;
+      border-color: #d0cdbf;
+    }
+
+    .proto-hero {
+      background: linear-gradient(180deg, #28374a 0%, #243343 100%);
+    }
+
+    .proto-article-wrap {
+      padding-bottom: 96px;
+      position: relative;
+      z-index: 2;
+    }
+    .proto-grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 28px;
+      margin-top: -48px;
+    }
+    .proto-article {
+      background: var(--white);
+      border: 1px solid #d4ccb8;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 16px rgba(30, 28, 24, .07), 0 24px 56px rgba(30, 28, 24, .13);
+    }
+    .proto-cover-wrap {
+      position: relative;
+      background: #182434;
+    }
+    .proto-cover { width: 100%; height: 420px; object-fit: cover; display: block; }
+    .proto-cover-wrap::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(23,33,44,0) 38%, rgba(23,33,44,.72) 100%);
+      pointer-events: none;
+    }
+    .proto-cover-meta {
+      position: absolute;
+      left: 24px;
+      bottom: 22px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+    }
+    .proto-content { padding: 38px 42px 46px; }
+    .proto-meta { display: flex; align-items: center; gap: 12px; color: var(--muted); font-size: 13px; margin-bottom: 14px; }
+    .proto-meta .dot { width: 4px; height: 4px; border-radius: 50%; background: #9a9786; }
+    .proto-content p { margin: 0 0 18px; line-height: 1.85; color: #564f42; }
+    .proto-content h2 {
+      margin: 30px 0 14px;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(26px, 3.4vw, 38px);
+      line-height: 1.12;
+      color: var(--green);
+    }
+    .proto-quote {
+      border-left: 3px solid var(--terra);
+      background: #faf6ef;
+      padding: 16px 18px;
+      margin: 28px 0;
+      color: #5f4b3e;
+      font-style: italic;
+    }
+    .proto-inline-cta {
+      margin-top: 34px;
+      background: #3a3829;
+      border-radius: 10px;
+      padding: 34px 28px;
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+    .proto-inline-cta .cta-band__h2 {
+      margin: 0 0 10px;
+      color: #f5f3ef;
+    }
+    .proto-inline-cta .cta-band__sub {
+      margin: 0;
+      color: rgba(211,199,173,.72);
+    }
+
+    .proto-side {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: sticky;
+      top: 98px;
+      height: fit-content;
+    }
+    .proto-card {
+      background: #fcfaf6;
+      border: 1px solid #dfd6c4;
+      border-radius: 10px;
+      padding: 18px;
+      box-shadow: 0 2px 10px rgba(58,56,41,.04);
+    }
+    .proto-card h3 {
+      margin: 0 0 12px;
+      font-size: 18px;
+      font-family: "Playfair Display", serif;
+      color: var(--green);
+    }
+    .proto-list { margin: 0; padding-left: 18px; color: #5d5749; line-height: 1.8; }
+    .proto-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    .proto-related {
+      margin-top: 34px;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      padding: 0;
+    }
+    .proto-related h2 {
+      margin: 0 0 20px;
+      color: var(--green);
+      font-family: "Playfair Display", serif;
+      font-size: clamp(28px, 3vw, 42px);
+      line-height: 1.1;
+    }
+    .proto-related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+    .proto-related-item {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--white);
+      border: 1px solid #e6decc;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease;
+      box-shadow: 0 8px 16px rgba(30, 28, 24, .04), 0 16px 36px rgba(30, 28, 24, .08);
+    }
+    .proto-related-item:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(60, 50, 35, .12);
+    }
+    .proto-related-item img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 1px solid #eee7d7;
+    }
+    .proto-related-item .inner { padding: 16px 16px 18px; }
+    .proto-related-item .chip {
+      margin-bottom: 10px;
+      font-size: 10px;
+    }
+    .proto-related-item h4 {
+      margin: 0 0 8px;
+      font-family: "Playfair Display", serif;
+      color: #3a3829;
+      font-size: clamp(21px, 2vw, 28px);
+      line-height: 1.14;
+      letter-spacing: -.01em;
+    }
+    .proto-related-item p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 1100px) {
+      .proto-grid { grid-template-columns: 1fr; }
+      .proto-side { position: static; }
+      .proto-related-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 768px) {
+      .wrap { padding: 0 20px; }
+      .proto-content { padding: 28px 22px 32px; }
+      .proto-cover { height: 250px; }
+      .proto-cover-meta { left: 14px; bottom: 12px; }
+      .proto-related-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <section class="blog-hero-partial-aaf252 proto-hero">
+    <div class="blog-head__grid"></div>
+    <div class="blog-head__deco">&para;</div>
+    <div class="wrap blog-head__inner">
+      <span class="eyebrow"><span class="eyebrow-rule"></span>Blog</span>
+      <h1 class="blog-head__h1">Un termino mal traducido puede frenar un proceso ante la <em>FDA</em></h1>
+      <p class="blog-head__sub">Prototipo de interna del articulo basado en el lenguaje visual actual del home y la pagina del blog.</p>
+    </div>
+  </section>
+
+  <section class="proto-article-wrap">
+    <div class="wrap proto-grid">
+      <article class="proto-article">
+        <div class="proto-cover-wrap">
+          <img class="proto-cover" src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=1400&auto=format&fit=crop" alt="Portada del articulo">
+          <div class="proto-cover-meta">
+            <span class="chip chip--med">Sector Medico</span>
+            <span class="chip chip--verde">Articulo interno</span>
+          </div>
+        </div>
+        <div class="proto-content">
+          <div class="proto-meta">
+            <span>5 Jun 2026</span>
+            <span class="dot"></span>
+            <span>hace 2 horas</span>
+            <span class="dot"></span>
+            <span>Sector Medico</span>
+          </div>
+
+          <p>En documentacion clinica, la precision terminologica no es opcional. Cuando una palabra se traduce fuera de contexto regulatorio, el efecto puede ser un rechazo formal del expediente.</p>
+          <p>Este prototipo plantea una lectura limpia, con ritmo visual y jerarquia tipografica para textos largos, sin perder el estilo del ecosistema actual del theme.</p>
+
+          <h2>Donde se rompe normalmente un expediente</h2>
+          <p>La mayoria de errores aparecen en segmentos repetitivos: consentimientos, anexos tecnicos, y tablas de eventos adversos. Ahi se necesita consistencia de glosario y control de version.</p>
+
+          <blockquote class="proto-quote">"La diferencia entre un termino correcto y uno aproximado puede cambiar la interpretacion juridica o clinica del documento".</blockquote>
+
+          <h2>Recomendacion de estructura</h2>
+          <p>Primero, define una taxonomia terminologica por sector. Segundo, controla la trazabilidad de cada cambio. Tercero, valida formato de destino antes de certificacion final.</p>
+
+          <div class="cta-band proto-inline-cta">
+            <div class="cta-band__left">
+              <h2 class="cta-band__h2">Necesitas revision de tu documento?</h2>
+              <p class="cta-band__sub">Te ayudamos a validar terminologia y formato para evitar devoluciones.</p>
+            </div>
+            <div class="cta-band__right">
+              <a href="#" class="btn btn--terra btn--lg btn-arrow">Solicitar cotizacion</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <aside class="proto-side">
+        <div class="proto-card">
+          <h3>Tabla de contenidos</h3>
+          <ol class="proto-list">
+            <li>Contexto regulatorio</li>
+            <li>Errores frecuentes</li>
+            <li>Recomendaciones practicas</li>
+          </ol>
+        </div>
+        <div class="proto-card">
+          <h3>Etiquetas</h3>
+          <div class="proto-tags">
+            <a class="chip chip--med" href="#">Farma</a>
+            <a class="chip chip--leg" href="#">Clinico</a>
+            <a class="chip chip--verde" href="#">FDA</a>
+            <a class="chip chip--verde" href="#">Certificada</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <div class="wrap proto-related">
+      <h2>Articulos relacionados</h2>
+      <div class="proto-related-grid">
+        <a class="proto-related-item" href="#">
+          <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=900&auto=format&fit=crop" alt="Articulo relacionado 1">
+          <div class="inner">
+            <span class="chip chip--leg">Sector Legal</span>
+            <h4>Traduccion juridica vs traduccion literal</h4>
+            <p>Cuando la literalidad rompe contexto normativo y como evitarlo desde el briefing inicial.</p>
+          </div>
+        </a>
+        <a class="proto-related-item" href="#">
+          <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=900&auto=format&fit=crop" alt="Articulo relacionado 2">
+          <div class="inner">
+            <span class="chip chip--verde">Certificacion</span>
+            <h4>Apostilla y traduccion certificada</h4>
+            <p>Guia rapida para preparar documentos sin reprocesos ni devoluciones por formato.</p>
+          </div>
+        </a>
+        <a class="proto-related-item" href="#">
+          <img src="https://images.unsplash.com/photo-1579165466741-7f35e4755660?q=80&w=900&auto=format&fit=crop" alt="Articulo relacionado 3">
+          <div class="inner">
+            <span class="chip chip--med">Sector Medico</span>
+            <h4>Checklist de entrega para visado medico</h4>
+            <p>Checklist operativo para garantizar consistencia terminologica en expedientes clinicos.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

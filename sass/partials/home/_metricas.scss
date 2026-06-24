@@ -1,0 +1,75 @@
+.metricas-partial-8091d3 {
+    padding: 48px 0 96px;
+    background: $text_white;
+    .wrap {
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            background: $cta_bg_hover;
+            border-radius: 10px;
+            overflow: hidden;
+            @media(max-width:1024px){
+                grid-template-columns: 1fr;
+            }
+            .metric {
+                background: $green_dark;
+                padding: 48px 40px;
+                transition: background .3s;
+                position: relative;
+                overflow: hidden;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: -40px;
+                    top: -40px;
+                    width: 140px;
+                    height: 140px;
+                    border-radius: 50%;
+                    background: rgba(255, 255, 255, .04);
+                    transition: transform .5s cubic-bezier(0.16, 1, 0.3, 1);
+                }
+                .metric__num {
+                    font-family: $playfair;
+                    font-weight: 700;
+                    font-size: 64px;
+                    color: $text_white;
+                    line-height: 1;
+                    margin-bottom: 12px;
+                    letter-spacing: -.02em;
+                    position: relative;
+                    z-index: 1;
+                    em {
+                        font-family: $playfair;
+                        font-style: italic;
+                        font-weight: 500;
+                        color: $areia;
+                    }
+                }
+                .metric__label {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: $areia-200;
+                    margin-bottom: 6px;
+                    position: relative;
+                    z-index: 1;
+                }
+                .metric__sub {
+                    font-size: 13px;
+                    color: rgba(211, 199, 173, .6);
+                    line-height: 1.6;
+                    max-width: 280px;
+                    position: relative;
+                    z-index: 1;
+                    margin-bottom: 0;
+                }
+                &:hover{
+                    background: $verde-500;
+                    &::after{
+                        transform: scale(1.4);
+                    }
+                }
+            }
+        }
+    }
+}

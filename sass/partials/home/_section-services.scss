@@ -1,0 +1,266 @@
+.section-services-partial-0884b5 {
+    background: $text_white;
+    padding: 112px 0;
+    overflow: hidden;
+    position: relative;
+    @media(max-width:768px){
+        padding: 76px 0;
+    }
+    .section-bignum {
+        position: absolute;
+        font-family: $playfair;
+        font-style: italic;
+        font-size: clamp(180px, 22vw, 320px);
+        font-weight: 700;
+        color: $verde-100;
+        opacity: .55;
+        line-height: .85;
+        pointer-events: none;
+        user-select: none;
+        z-index: 0;
+        letter-spacing: -.03em;
+    }
+    .wrap {
+        // Grid
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 56px;
+            @media(max-width:768px){
+                grid-template-columns: 1fr;
+            }
+            .service-card {
+                background: #ffffff;
+                border-radius: 10px;
+                box-shadow: 0 1px 3px rgba(30, 28, 24, .05), 0 4px 12px rgba(30, 28, 24, .06);
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                isolation: isolate;
+                transition: box-shadow .4s cubic-bezier(0.16, 1, 0.3, 1), transform .4s cubic-bezier(0.16, 1, 0.3, 1), border-color .3s;
+                border-top: 3px solid $verde-200;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    z-index: -1;
+                    background: linear-gradient(135deg, $verde-50 0%, transparent 60%);
+                    opacity: 0;
+                    transition: opacity .4s cubic-bezier(0.16, 1, 0.3, 1);
+                }
+                .service-card__header {
+                    padding: 32px 32px 0;
+                    position: relative;
+                    .chip {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 5px;
+                        font-size: 11px;
+                        font-weight: 600;
+                        letter-spacing: 1.4px;
+                        text-transform: uppercase;
+                        padding: 5px 12px;
+                        border-radius: 100px;
+                        border: 1px solid;
+                    }
+                    .service-card__num {
+                        font-family: $playfair;
+                        font-style: italic;
+                        font-size: 88px;
+                        font-weight: 700;
+                        color: $verde-100;
+                        line-height: 1;
+                        float: right;
+                        margin: -10px -8px 0 0;
+                        transition: color .4s cubic-bezier(0.16, 1, 0.3, 1), transform .4s cubic-bezier(0.16, 1, 0.3, 1);
+                    }
+                }
+                &:hover{
+                    &::before{
+                        opacity: 1;
+                    }
+                    .service-card__header{
+                        .service-card__num {
+                            transform: translateX(-4px);
+                        }
+                    }
+                }
+                // Card body
+                .service-card__content {
+                    padding: 16px 32px 32px;
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    .service-card__title {
+                        font-family: $playfair;
+                        font-weight: 700;
+                        font-size: 26px;
+                        color: $verde-900;
+                        line-height: 1.15;
+                        margin: 12px 0 10px;
+                        clear: both;
+                        letter-spacing: -.01em;
+                        em {
+                            font-family: $playfair;
+                            font-style: italic;
+                            color: $green_dark;
+                        }
+                    }
+                    .service-card__body {
+                        font-size: 14px;
+                        color: $text_marron;
+                        line-height: 1.75;
+                    }
+                    .service-card__list {
+                        margin: 18px 0;
+                        border-top: 1px solid $verde-100;
+                        padding: 0;
+                        padding-top: 16px;
+                        list-style: none;
+                        li {
+                            font-size: 13.5px;
+                            color: $text_dark;
+                            padding: 9px 0;
+                            border-bottom: 1px solid $verde-100;
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+                            transition: padding-left .3s cubic-bezier(0.16, 1, 0.3, 1), color .3s;
+                            &::before {
+                                content: '→';
+                                font-size: 11px;
+                                flex-shrink: 0;
+                                transition: transform .3s cubic-bezier(0.16, 1, 0.3, 1);
+                            }
+                        }
+                    }
+                    .service-card__cta {
+                        margin-top: auto;
+                        padding-top: 16px;
+                        .btn-arrow{
+                            @include btn;
+                            background: transparent;
+                            color: $green_dark;
+                            border-color: $verde-300;
+                            &::after {
+                                content: ' →';
+                                transition: letter-spacing .2s;
+                                display: inline-block;
+                            }
+                        }
+                    }
+                }
+            }
+            .service-card--med {
+                border-top-color: $medical;
+                &::before {
+                    background: linear-gradient(135deg, #EDF4F3 0%, transparent 60%);
+                }
+                &:hover{
+                    .service-card__header{
+                        .service-card__num {
+                            color: #B8D5D2;
+                        }
+                    }
+                }
+                .chip--med {
+                    color: $medical;
+                    background: #EDF4F3;
+                    border-color: #B8D5D2;
+                }
+                .service-card__content{
+                    .service-card__list{
+                        li{
+                            &::before {
+                                color: $medical;
+                            }
+                        }
+                    }
+                }
+            }
+            .service-card--leg {
+                border-top-color: $legal;
+                &::before {
+                    background: linear-gradient(135deg, #F5EDE6 0%, transparent 60%);
+                }
+                &:hover{
+                    .service-card__header{
+                        .service-card__num {
+                            color: #D4B49A;
+                        }
+                    }
+                }
+                .chip--leg{
+                    color: $legal;
+                    background: #F5EDE6;
+                    border-color: #D4B49A;
+                }
+                .service-card__content{
+                    .service-card__list{
+                        li{
+                            &::before {
+                                color: $legal;
+                            }
+                        }
+                    }
+                }
+            }
+            .service-card--cert{
+                border-top-color: $green_dark;
+                &::before {
+                    background: linear-gradient(135deg, $verde-50 0%, transparent 60%);
+                }
+                &:hover{
+                    .service-card__header{
+                        .service-card__num {
+                            color: #d0cdbf;
+                        }
+                    }
+                }
+                .chip--verde{
+                    color: $green_dark;
+                    background: $verde-50;
+                    border-color: $verde-200;
+                }
+                .service-card__content{
+                    .service-card__list{
+                        li{
+                            &::before {
+                                color: $green_dark;
+                            }
+                        }
+                    }
+                }
+            }
+            .service-card--rev{
+                border-top-color: $areia-600;
+                &::before {
+                    background: linear-gradient(135deg, #EDE8DF 0%, transparent 60%);
+                }
+                &:hover{
+                    .service-card__header{
+                        .service-card__num {
+                            color: #e2d7be;
+                        }
+                    }
+                }
+                .chip--verde{
+                    color: $green_dark;
+                    background: $verde-50;
+                    border-color: $verde-200;
+                }
+                .service-card__content{
+                    .service-card__list{
+                        li{
+                            &::before {
+                                color: $areia-600;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

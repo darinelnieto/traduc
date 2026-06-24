@@ -1,0 +1,27 @@
+@import 'default_theme';
+@import "../node_modules/aos/src/sass/aos.scss";
+
+// sajo include zone (don't delete anything below)
+// #SajoPartials
+@import "./partials/single-blog/single-blog-content";
+@import "./partials/single-blog/single-blog-hero";
+@import "./partials/blog/blog-list";
+@import "./partials/blog/blog-hero";
+@import "./partials/globals/footer";
+@import "./partials/home/cta-band";
+@import "./partials/home/faqs";
+@import "./partials/home/contact";
+@import "./partials/home/testimonial";
+@import "./partials/home/about";
+@import "./partials/home/metricas";
+@import "./partials/home/section-services";
+@import "./partials/home/section--cream";
+@import "./partials/home/section-sm";
+@import "./partials/home/marquee-bar";
+@import "./partials/home/hero";
+@import "./partials/globals/header";
+
+// #SajoTemplates
+@import "./templates/single-blog-template";
+@import "./templates/blog-page-template";
+@import "./templates/traduc-page-template";

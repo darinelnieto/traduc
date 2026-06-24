@@ -1,0 +1,2 @@
+// Minify CSS output for main.bundle.css using CssMinimizerPlugin
+npm install css-minimizer-webpack-plugin --save-dev

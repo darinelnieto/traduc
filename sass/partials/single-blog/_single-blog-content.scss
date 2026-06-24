@@ -1,0 +1,134 @@
+.single-blog-content-partial-06587d {
+    background: $bg_beige;
+    .proto-grid {
+        display: grid;
+        grid-template-columns: 1fr 320px;
+        gap: 28px;
+        margin-top: -48px;
+        @media(max-width: 1024px){
+            display: flex;
+            flex-direction: column;
+        }
+        .proto-article {
+            background: $white;
+            border: 1px solid $areia;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 16px rgba(30, 28, 24, .07), 0 24px 56px rgba(30, 28, 24, .13);
+            z-index: 1;
+            .proto-cover-wrap {
+                position: relative;
+                background: $bg_blue;
+                .proto-cover {
+                    width: 100%;
+                    height: 420px;
+                    object-fit: cover;
+                    display: block;
+                }
+                .proto-cover-meta {
+                    position: absolute;
+                    left: 24px;
+                    bottom: 22px;
+                    z-index: 2;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    font-size: 12px;
+                }
+                @media (max-width: 768px) {
+                    .proto-cover {
+                        height: 200px;
+                    }
+                }
+            }
+            .proto-content{
+                padding: 38px 42px 46px;
+                @media (max-width: 768px) {
+                    padding: 16px 18px 15px;
+                }
+                .proto-meta {
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    color: $verde-900;
+                    font-size: 13px;
+                    margin-bottom: 14px;
+                    .dot {
+                        width: 4px;
+                        height: 4px;
+                        border-radius: 50%;
+                        background: $verde-900;
+                    }
+                }
+                .content{
+                    p {
+                        font-size: 16px;
+                        font-weight: 300;
+                        color: $text_marron;
+                        line-height: 1.75;
+                    }
+                    h2, h3, h4, h5, h6{
+                        font-family: $playfair;
+                        font-weight: 700;
+                        font-size: 26px;
+                        color: $verde-900;
+                        line-height: 1.15;
+                        margin: 12px 0 10px;
+                        clear: both;
+                        letter-spacing: -0.01em;
+                    }
+                    img{
+                        width:100%;
+                        height: auto;
+                        object-fit: contain;
+                    }
+                }
+            }
+        }
+        .proto-side {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            position: sticky;
+            top: 70px;
+            height: fit-content;
+            .proto-card {
+                background: $white;
+                border: 1px solid $verde-200;
+                border-radius: 10px;
+                padding: 18px;
+                box-shadow: 0 2px 10px rgba(58, 56, 41, .04);
+                h3{
+                    font-family: $playfair;
+                    font-weight: 700;
+                    font-size: 26px;
+                    color: $verde-900;
+                    line-height: 1.15;
+                    margin: 12px 0 10px;
+                    clear: both;
+                    letter-spacing: -0.01em;
+                }
+                ol{
+                    li{
+                        a{
+                            display: block;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            font-size: 16px;
+                            font-weight: 300;
+                            color: $text_marron;
+                            line-height: 1.75;
+                            text-decoration: none;
+                            transition: all .25s ease;
+                            &:hover{
+                                color: $green_dark; 
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

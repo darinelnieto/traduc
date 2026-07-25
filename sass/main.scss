@@ -3,6 +3,7 @@
 
 // sajo include zone (don't delete anything below)
 // #SajoPartials
+@import "./partials/flexible/global_hero";
 @import "./partials/single-blog/single-blog-content";
 @import "./partials/single-blog/single-blog-hero";
 @import "./partials/blog/blog-list";
@@ -22,6 +23,7 @@
 @import "./partials/globals/header";
 
 // #SajoTemplates
+@import "./templates/flexible-page-template";
 @import "./templates/single-blog-template";
 @import "./templates/blog-page-template";
 @import "./templates/traduc-page-template";

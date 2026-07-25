@@ -1,0 +1,1 @@
+// JS for partial: global_hero\n

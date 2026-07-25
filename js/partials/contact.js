@@ -287,11 +287,12 @@ function renderFeedback(target, message, ok) {
 }
 
 function renderSuccessState(target) {
-    target.innerHTML = '';
-    target.insertAdjacentHTML(
-        'beforeend',
-        '<div id="successState"><div class="check">✓</div><h3 class="title">¡Solicitud recibida!</h3><p class="message">Te respondemos en menos de 2 horas hábiles. Revisa tu correo electrónico.</p></div>'
-    );
+    // target.innerHTML = '';
+    // target.insertAdjacentHTML(
+    //     'beforeend',
+    //     '<div id="successState"><div class="check">✓</div><h3 class="title">¡Solicitud recibida!</h3><p class="message">Te respondemos en menos de 2 horas hábiles. Revisa tu correo electrónico.</p></div>'
+    // );
+    window.location.href = '/gracias';
 }
 
 function getHubSpotErrorMessage(errorData) {

@@ -51,19 +51,19 @@
                 transform: translateY(20px);
                 animation: word-in .9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
                 animation-delay: .35s;
-                &::after {
-                    content: '';
-                    display: block;
-                    position: absolute;
-                    bottom: .08em;
-                    left: 0;
-                    right: 0;
-                    height: 4px;
-                    background: $terra;
-                    transform: scaleX(0);
-                    transform-origin: left;
-                    animation: underline-in 1.4s cubic-bezier(0.16, 1, 0.3, 1) .8s forwards;
-                }
+                // &::after {
+                //     content: '';
+                //     display: block;
+                //     position: absolute;
+                //     bottom: .08em;
+                //     left: 0;
+                //     right: 0;
+                //     height: 4px;
+                //     background: $terra;
+                //     transform: scaleX(0);
+                //     transform-origin: left;
+                //     animation: underline-in 1.4s cubic-bezier(0.16, 1, 0.3, 1) .8s forwards;
+                // }
             }
         }
         // Description

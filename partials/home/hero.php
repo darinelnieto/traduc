@@ -19,6 +19,12 @@ $hero = get_field('hero_content');
 $ctas = $hero['call_to_actions'];
 ?>
 <section class="hero-partial-b94fa3" id="inicio">
+    <?php if(!empty($hero['video'])): ?>
+        <video id="customVideo" autoplay muted loop playsinline preload="auto" style="width: 100%; height: auto; object-fit: cover;">
+            <source src="<?= $hero['video']; ?>" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+        </video>
+    <?php endif; ?>
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-10 hero_texts">
@@ -66,11 +72,11 @@ $ctas = $hero['call_to_actions'];
     <div class="hero__bg-grid"></div>
     <!-- Deco -->
     <div class="hero__deco-num">20</div>
-    <span class="hero__glyph hero__glyph--1">¶</span>
-    <span class="hero__glyph hero__glyph--2">§</span>
-    <span class="hero__glyph hero__glyph--3">&</span>
+    <span class="hero__glyph hero__glyph--1 d-none">¶</span>
+    <span class="hero__glyph hero__glyph--2 d-none">§</span>
+    <span class="hero__glyph hero__glyph--3 d-none">&</span>
     <!-- Doc card -->
-    <div class="hero__doc" aria-hidden="true" style="transform: translateY(calc(-50% + 2.06398px)) translateX(1.675px);">
+    <div class="hero__doc d-none" aria-hidden="true" style="transform: translateY(calc(-50% + 2.06398px)) translateX(1.675px);">
       <div class="hero__doc-card">
         <div class="hero__doc-header">
           <span class="hero__doc-stamp"><?= $hero['hero_header']['stamp'] ?? ''; ?></span>

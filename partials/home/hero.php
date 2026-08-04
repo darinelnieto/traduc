@@ -72,11 +72,11 @@ $ctas = $hero['call_to_actions'];
     <div class="hero__bg-grid"></div>
     <!-- Deco -->
     <div class="hero__deco-num">20</div>
-    <span class="hero__glyph hero__glyph--1 d-none">¶</span>
+    <!-- <span class="hero__glyph hero__glyph--1 d-none">¶</span>
     <span class="hero__glyph hero__glyph--2 d-none">§</span>
-    <span class="hero__glyph hero__glyph--3 d-none">&</span>
+    <span class="hero__glyph hero__glyph--3 d-none">&</span> -->
     <!-- Doc card -->
-    <div class="hero__doc d-none" aria-hidden="true" style="transform: translateY(calc(-50% + 2.06398px)) translateX(1.675px);">
+    <!-- <div class="hero__doc d-none" aria-hidden="true" style="transform: translateY(calc(-50% + 2.06398px)) translateX(1.675px);">
       <div class="hero__doc-card">
         <div class="hero__doc-header">
           <span class="hero__doc-stamp"><?= $hero['hero_header']['stamp'] ?? ''; ?></span>
@@ -102,7 +102,7 @@ $ctas = $hero['call_to_actions'];
         <div class="hero__doc-footer">
           <?= $hero['footer'] ?? ''; ?>
         </div>
-      </div>
+      </div> -->
       <div class="hero__doc-card hero__doc-card--back"></div>
       <span class="hero__tag hero__tag--1"><?= $hero['tags']['main_tag'] ?? ''; ?></span>
       <span class="hero__tag hero__tag--2"><?= $hero['tags']['secondary_tag'] ?? ''; ?></span>

@@ -15,7 +15,7 @@
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
-$manifest = get_field('manifest_content')
+$manifest = get_field('manifest_content');
 ?>
 <section class="section-sm-partial-cca987">
     <div class="wrap" data-aos="fade-up">

@@ -1,0 +1,1 @@
+// JS for partial: content-two-column\n

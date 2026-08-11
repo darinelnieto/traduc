@@ -104,8 +104,8 @@ $ctas = $hero['call_to_actions'];
         </div>
       </div> -->
       <div class="hero__doc-card hero__doc-card--back"></div>
-      <span class="hero__tag hero__tag--1"><?= $hero['tags']['main_tag'] ?? ''; ?></span>
+      <!-- <span class="hero__tag hero__tag--1"><?= $hero['tags']['main_tag'] ?? ''; ?></span>
       <span class="hero__tag hero__tag--2"><?= $hero['tags']['secondary_tag'] ?? ''; ?></span>
-      <span class="hero__tag hero__tag--3"><?= $hero['tags']['third_tag'] ?? ''; ?></span>
+      <span class="hero__tag hero__tag--3"><?= $hero['tags']['third_tag'] ?? ''; ?></span> -->
     </div>
 </section>          

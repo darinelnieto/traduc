@@ -32,9 +32,9 @@ $verde-500:#83805f;
 $white: #ffffff;
 /*======== Function width ========*/
 $max-width: 1240px;
-#wpadminbar{
-    display: none;
-}
+// #wpadminbar{
+//     display: none;
+// }
 html{
     margin-top: 0 !important;
     .container{
@@ -171,6 +171,12 @@ body{
     line-height: 1.75;
     max-width: 540px;
 }
+.p-description{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.75;
+    max-width: 540px;
+}
 .wrap{
     max-width: $max-width;
     margin: 0 auto;
@@ -239,4 +245,8 @@ body{
     color: $green_dark;
     background: $verde-50;
     border-color: $verde-200;
+}
+
+.section--cream{
+    background: $text_white;
 }

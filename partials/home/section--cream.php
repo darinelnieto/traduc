@@ -36,14 +36,23 @@ $key = 0;
             <?php foreach($steps as $item): $key++; ?>
                 <div class="pstep is-done" data-aos="zoom-in">
                     <div class="pstep__node">
-                    <div class="pstep__node-ring">
-                </div>
-                <div class="pstep__node-num" data-aos="fade-up"><?= $key < 10 ? '0' . $key : $key; ?></div>
-                    <div class="pstep__node-icon"><?= $item['numb'] ?? '✓'; ?></div>
+                        <div class="pstep__node-ring"></div>
+                        <div class="pstep__node-num" data-aos="fade-up">
+                            <?= $key < 10 ? '0' . $key : $key; ?>
+                        </div>
+                        <div class="pstep__node-icon">
+                            <?= $item['numb'] ?? '✓'; ?>
+                        </div>
                     </div>
-                    <span class="pstep__label"><?= $item['label'] ?? ''; ?></span>
-                    <h3 class="pstep__title"><?= $item['item_title'] ?? ''; ?></h3>
-                    <p class="pstep__body"><?= $item['descripton'] ?? ''; ?></p>
+                    <span class="pstep__label">
+                        <?= $item['label'] ?? ''; ?>
+                    </span>
+                    <h3 class="pstep__title">
+                        <?= $item['item_title'] ?? ''; ?>
+                    </h3>
+                    <p class="pstep__body">
+                        <?= $item['descripton'] ?? ''; ?>
+                    </p>
                 </div>
             <?php endforeach; ?>
         </div>

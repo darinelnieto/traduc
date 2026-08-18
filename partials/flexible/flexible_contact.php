@@ -27,7 +27,6 @@ $form_txt = $contact['form'];
 $panel_r = $contact['contact_panel'];
 ?>
 <section class="flexible-contact-partial-322307" id="contacto" style="overflow:hidden;position:relative">
-    <div class="section-bignum" style="right:-40px;top:20px">@</div>
     <div class="wrap" style="position:relative">
       <div class="rev in">
         <?php if(!empty($contact['eyebrow'])): ?>

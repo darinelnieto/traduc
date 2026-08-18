@@ -1,0 +1,89 @@
+.flexible-cta-band-partial-f9847c {
+    padding: 72px 0;
+    background: $text_white;
+    position: relative;
+    @media(max-width:768px){
+        padding: 76px 0;
+    }
+    .cta-band {
+        background: $verde-900;
+        border-radius: 10px;
+        padding: 72px 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 40px;
+        overflow: hidden;
+        position: relative;
+        @media(max-width: 1024px) {
+            flex-direction: column;
+            text-align: center;
+            padding: 56px 40px;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            left: -60px;
+            bottom: -60px;
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(211, 199, 173, .06) 0%, transparent 70%);
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            right: -80px;
+            top: -80px;
+            width: 360px;
+            height: 360px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(117, 68, 55, .22) 0%, transparent 70%);
+        }
+        .cta-band__left, .cta-band__right {
+            position: relative;
+            z-index: 1;
+            .cta-band__h2 {
+                font-family: $playfair;
+                font-weight: 700;
+                font-size: clamp(28px, 3.2vw, 42px);
+                color: $text_white;
+                line-height: 1.15;
+                margin-bottom: 10px;
+                letter-spacing: -.015em;
+                em {
+                    font-family: $playfair;
+                    font-style: italic;
+                    color: $areia;
+                }
+            }
+            .cta-band__sub {
+                font-size: 15px;
+                color: rgba(211, 199, 173, .65);
+                font-weight: 300;
+                margin-bottom: 0;
+            }
+        }
+        .cta-band__right {
+            flex-shrink: 0;
+            .btn--terra {
+                @include btn;
+                background: $terra;
+                color: $text_white;
+                border-color: $terra;
+                font-size: 15px;
+                padding: 15px 32px;
+                &::after {
+                    content: ' →';
+                    transition: letter-spacing .2s;
+                    display: inline-block;
+                }
+                &:hover {
+                    background: #4a2318;
+                    transform: translateY(-1px);
+                    box-shadow: 0 6px 20px rgba(117, 68, 55, .28);
+                }
+            }
+        }
+    }
+}

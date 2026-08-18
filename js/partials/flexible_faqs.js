@@ -1,0 +1,1 @@
+// JS for partial: flexible_faqs\n

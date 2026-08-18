@@ -1,0 +1,30 @@
+.content-table-partial-b0c8c4 {
+    padding: 72px 0;
+
+    .table-scroll {
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .table{
+        margin-top: 72px;
+        width: 100%;
+        tr{
+            th, td{
+                padding: 16px 24px;
+                text-align: left;
+            }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .table {
+            width: max-content;
+            min-width: 100%;
+        }
+        .call-to-action{
+            font-size: 12px;
+        }
+    }
+}

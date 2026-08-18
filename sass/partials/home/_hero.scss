@@ -105,43 +105,6 @@
             gap: 12px;
             flex-wrap: wrap;
             margin-bottom: 60px;
-            li{
-                .call-to-action{
-                    @include btn;
-                    font-size: 15px;
-                }
-                .primary{
-                    background: $terra;
-                    color: $areia;
-                    border-color: $terra;
-                    &::after {
-                        content: ' →';
-                        transition: letter-spacing .2s;
-                        display: inline-block;
-                    }
-                    &:hover{
-                        background: $terra_2;
-                        transform: translateY(-1px);
-                        box-shadow: 0 6px 20px rgba(117, 68, 55, .28);
-                        color: $text_white;
-                        border-color: $terra;
-                    }
-                }
-                .secondary{
-                    background: transparent;
-                    color: $text_white;
-                    border-color: rgba(211, 199, 173, .4);
-                    &:hover{
-                        border-color: $areia;
-                        background: rgba(255, 255, 255, .08);
-                    }
-                    &::after {
-                        content: ' →';
-                        transition: letter-spacing .2s;
-                        display: inline-block;
-                    }
-                }
-            }
         }
         // docs
         .docs{

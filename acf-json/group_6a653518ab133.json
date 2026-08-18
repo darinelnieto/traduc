@@ -647,6 +647,595 @@
                     ],
                     "min": "",
                     "max": ""
+                },
+                "layout_6a7e221cef448": {
+                    "key": "layout_6a7e221cef448",
+                    "name": "content-table",
+                    "label": "content-table",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6a7e2364ef44a",
+                            "label": "Table section",
+                            "name": "table_section",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6a7e2403ef44b",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "Documentos que \r\n<em>traducimos oficialmente<\/em>",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "rows": 2,
+                                    "placeholder": "",
+                                    "new_lines": "br"
+                                },
+                                {
+                                    "key": "field_6a7e24fcef44d",
+                                    "label": "Thead",
+                                    "name": "thead",
+                                    "aria-label": "",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "layout": "table",
+                                    "pagination": 0,
+                                    "min": 0,
+                                    "max": 0,
+                                    "collapsed": "",
+                                    "button_label": "Add Row",
+                                    "rows_per_page": 20,
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_6a7e2515ef44e",
+                                            "label": "Th",
+                                            "name": "th",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "Categoría",
+                                            "maxlength": "",
+                                            "allow_in_bindings": 0,
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "parent_repeater": "field_6a7e24fcef44d"
+                                        },
+                                        {
+                                            "key": "field_6a7e2a4545d51",
+                                            "label": "Scope",
+                                            "name": "scope",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "col",
+                                            "maxlength": "",
+                                            "allow_in_bindings": 0,
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "parent_repeater": "field_6a7e24fcef44d"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "field_6a7e2417ef44c",
+                                    "label": "Table",
+                                    "name": "table",
+                                    "aria-label": "",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "layout": "table",
+                                    "pagination": 0,
+                                    "min": 0,
+                                    "max": 0,
+                                    "collapsed": "",
+                                    "button_label": "Add Row",
+                                    "rows_per_page": 20,
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_6a7e25b3ef44f",
+                                            "label": "Tbody",
+                                            "name": "tbody",
+                                            "aria-label": "",
+                                            "type": "repeater",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "layout": "table",
+                                            "min": 0,
+                                            "max": 0,
+                                            "collapsed": "",
+                                            "button_label": "Add Row",
+                                            "rows_per_page": 20,
+                                            "sub_fields": [
+                                                {
+                                                    "key": "field_6a7e25b4ef450",
+                                                    "label": "Td",
+                                                    "name": "td",
+                                                    "aria-label": "",
+                                                    "type": "text",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "default_value": "Categoría",
+                                                    "maxlength": "",
+                                                    "allow_in_bindings": 0,
+                                                    "placeholder": "",
+                                                    "prepend": "",
+                                                    "append": "",
+                                                    "parent_repeater": "field_6a7e25b3ef44f"
+                                                },
+                                                {
+                                                    "key": "field_6a7e2b4f35fc9",
+                                                    "label": "Scope",
+                                                    "name": "scope",
+                                                    "aria-label": "",
+                                                    "type": "text",
+                                                    "instructions": "",
+                                                    "required": 0,
+                                                    "conditional_logic": 0,
+                                                    "wrapper": {
+                                                        "width": "",
+                                                        "class": "",
+                                                        "id": ""
+                                                    },
+                                                    "default_value": "col",
+                                                    "maxlength": "",
+                                                    "allow_in_bindings": 0,
+                                                    "placeholder": "",
+                                                    "prepend": "",
+                                                    "append": "",
+                                                    "parent_repeater": "field_6a7e25b3ef44f"
+                                                }
+                                            ],
+                                            "parent_repeater": "field_6a7e2417ef44c"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "field_6a7e31a26c854",
+                                    "label": "Call to action",
+                                    "name": "call_to_action",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "allow_in_bindings": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6a8449c297093": {
+                    "key": "layout_6a8449c297093",
+                    "name": "flexible_faqs",
+                    "label": "flexible_faqs",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6a8449291195e",
+                            "label": "Faqs group",
+                            "name": "faqs_group",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6a8449291195f",
+                                    "label": "eyebrow",
+                                    "name": "eyebrow",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "FAQ",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_6a84492911960",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "Preguntas <em>frecuentes.<\/em>",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_6a84492911961",
+                                    "label": "Faqs list",
+                                    "name": "faqs_list",
+                                    "aria-label": "",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "layout": "block",
+                                    "pagination": 0,
+                                    "min": 0,
+                                    "max": 0,
+                                    "collapsed": "",
+                                    "button_label": "Add Row",
+                                    "rows_per_page": 20,
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_6a84492911962",
+                                            "label": "Ask",
+                                            "name": "ask",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "¿Qué es una traducción oficial certificada?",
+                                            "maxlength": "",
+                                            "allow_in_bindings": 0,
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "parent_repeater": "field_6a84492911961"
+                                        },
+                                        {
+                                            "key": "field_6a84492911963",
+                                            "label": "Answer",
+                                            "name": "answer",
+                                            "aria-label": "",
+                                            "type": "wysiwyg",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "Una traducción oficial certificada incluye una declaración de exactitud firmada por el traductor y cumple los requisitos formales para ser presentada ante organismos oficiales, instituciones académicas, tribunales o entidades regulatorias. TraduC emite traducciones con validez ante estas entidades e incluye apostilla cuando se requiere.",
+                                            "allow_in_bindings": 0,
+                                            "tabs": "all",
+                                            "toolbar": "full",
+                                            "media_upload": 1,
+                                            "delay": 0,
+                                            "parent_repeater": "field_6a84492911961"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6a8475033a808": {
+                    "key": "layout_6a8475033a808",
+                    "name": "flexible_cta_band",
+                    "label": "flexible_cta_band",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6a8474e651dd8",
+                            "label": "Cta band group",
+                            "name": "cta_band_group",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6a8474e651dd9",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "¿Tienes un documento<br>que <em>no puede fallar?<\/em>",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_6a8474e651dda",
+                                    "label": "Intro",
+                                    "name": "intro",
+                                    "aria-label": "",
+                                    "type": "textarea",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "Cotización en menos de 2 horas hábiles.",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "rows": 2,
+                                    "placeholder": "",
+                                    "new_lines": ""
+                                },
+                                {
+                                    "key": "field_6a8474e651ddb",
+                                    "label": "Link",
+                                    "name": "link",
+                                    "aria-label": "",
+                                    "type": "link",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "allow_in_bindings": 0
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_6a8477f724b2c": {
+                    "key": "layout_6a8477f724b2c",
+                    "name": "flexible_pillars",
+                    "label": "flexible_pillars",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6a8477d482c8f",
+                            "label": "Pillars",
+                            "name": "pillars",
+                            "aria-label": "",
+                            "type": "group",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6a8477d482c90",
+                                    "label": "Label",
+                                    "name": "label",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "Ventaja única",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_6a8477d482c91",
+                                    "label": "Title",
+                                    "name": "title",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "Tres capacidades.<br>Una combinación <em>poco común.<\/em>",
+                                    "maxlength": "",
+                                    "allow_in_bindings": 0,
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": ""
+                                },
+                                {
+                                    "key": "field_6a8477d482c92",
+                                    "label": "Pillars items",
+                                    "name": "pillars_items",
+                                    "aria-label": "",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "layout": "block",
+                                    "pagination": 0,
+                                    "min": 0,
+                                    "max": 0,
+                                    "collapsed": "",
+                                    "button_label": "Add Row",
+                                    "rows_per_page": 20,
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_6a8477d482c93",
+                                            "label": "Title",
+                                            "name": "title",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "Formación Médica",
+                                            "maxlength": "",
+                                            "allow_in_bindings": 0,
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "parent_repeater": "field_6a8477d482c92"
+                                        },
+                                        {
+                                            "key": "field_6a8477d482c94",
+                                            "label": "Description",
+                                            "name": "description",
+                                            "aria-label": "",
+                                            "type": "textarea",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "Traductores con carrera en medicina. Entendemos el contexto clínico detrás de cada término e identificamos errores invisibles que ningún revisor lingüístico sin formación médica puede detectar.",
+                                            "maxlength": "",
+                                            "allow_in_bindings": 0,
+                                            "rows": 4,
+                                            "placeholder": "",
+                                            "new_lines": "br",
+                                            "parent_repeater": "field_6a8477d482c92"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
                 }
             },
             "min": "",
@@ -675,5 +1264,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1786485789
+    "modified": 1787066384
 }

@@ -250,3 +250,39 @@ body{
 .section--cream{
     background: $text_white;
 }
+// Ctas
+.call-to-action{
+    @include btn;
+}
+.primary{
+    background: $terra;
+    color: $areia;
+    border-color: $terra;
+    &::after {
+        content: ' →';
+        transition: letter-spacing .2s;
+        display: inline-block;
+    }
+    &:hover{
+        background: $terra_2;
+        transform: translateY(-2px) !important;
+        box-shadow: 0 6px 20px rgba(117, 68, 55, .28);
+        color: $text_white;
+        border-color: $terra;
+    }
+}
+.secondary{
+    background: transparent;
+    color: $text_white;
+    border-color: rgba(211, 199, 173, .4);
+    &:hover{
+        border-color: $areia;
+        background: rgba(255, 255, 255, .08);
+        color: $text_white;
+    }
+    &::after {
+        content: ' →';
+        transition: letter-spacing .2s;
+        display: inline-block;
+    }
+}

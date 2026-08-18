@@ -1,31 +1,30 @@
 <?php
-// $script_handle = 'cta-band-js';
+// $script_handle = 'flexible_cta_band-js';
 // wp_enqueue_script(
 //     $script_handle,
-//     get_template_directory_uri() . '/js/partials-min/cta-band.min.js',
+//     get_template_directory_uri() . '/js/partials-min/flexible_cta_band.min.js',
 //     array('jquery'),
 //     null,
 //     true
 // );
 /**
  * 
- * Partial Name: cta-band
+ * Partial Name: flexible_cta_band
  * 
  */
 if ( ! defined( 'ABSPATH' ) ) {
     exit; // Exit if accessed directly.
 }
-
-$band = get_field('cta_band_group');
+$band = get_sub_field('cta_band_group');
 
 if (empty($band)) {
     $posts_page_id = (int) get_option('page_for_posts');
     if ($posts_page_id > 0) {
-        $band = get_field('cta_band_group', $posts_page_id);
+        $band = get_sub_field('cta_band_group', $posts_page_id);
     }
 }
 ?>
-<section class="cta-band-partial-df6c65 section section--sm">
+<section class="flexible-cta-band-partial-f9847c">
     <div class="wrap">
       <div class="cta-band rev in" data-aos="fade-up">
         <div class="cta-band__left">

@@ -2,6 +2,7 @@
     background: $text_white;
     padding: 112px 0;
     position: relative;
+    overflow:hidden;
     @media(max-width:768px){
         padding: 76px 0;
     }

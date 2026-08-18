@@ -79,7 +79,9 @@
             li{
                 .call-to-action{
                     @include btn;
-                    font-size: 15px;
+                    @media(max-width: 768px){
+                        font-size: 14px;
+                    }
                 }
                 .primary{
                     background: $terra;

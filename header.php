@@ -38,6 +38,18 @@ if ( ! defined( 'ABSPATH' ) ) {
       <?= $json_ld_item; ?>
     <?php endwhile; ?>
   <?php endif; ?>
+  <?php if ( have_rows('json_ld_scripts_individual') ) : ?>
+    <?php while ( have_rows('json_ld_scripts_individual') ) : the_row(); ?>
+      <?php
+        $json_ld_item = get_sub_field('item', false);
+        if ( empty($json_ld_item) ) {
+          continue;
+        }
+        $json_ld_item = preg_replace('/^\s*<p>\s*(<script\b[\s\S]*?<\/script>)\s*<\/p>\s*$/i', '$1', $json_ld_item);
+      ?>
+      <?= $json_ld_item; ?>
+    <?php endwhile; ?>
+  <?php endif; ?>
 </head>
 
 <body <?php body_class(); ?>>

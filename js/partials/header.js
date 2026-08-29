@@ -100,3 +100,31 @@ if (navAs.length) {
         });
     });
 }
+// Call to action event
+$('.whatsapp-chat').on('click', function(e){
+	e.preventDefault();
+    
+    var url = $(this).attr('href');
+    var redirected = false;
+
+    function navigate() {
+        if (!redirected) {
+            redirected = true;
+            window.location.href = url;
+        }
+    }
+
+    var timer = setTimeout(navigate, 100);
+
+    gtag('event', 'click_whatsapp', {
+        'event_category': 'WhatsApp',
+        'event_label': 'Boton WhatsApp',
+        'page_location': window.location.href,
+        'transport': 'beacon',
+        'value': 1,
+        'event_callback': function() {
+            clearTimeout(timer);
+            navigate();
+        }
+    });
+});

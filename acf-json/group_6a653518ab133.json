@@ -157,6 +157,27 @@
                                             "allow_in_bindings": 0
                                         },
                                         {
+                                            "key": "field_6a930f68ef33d",
+                                            "label": "Main wp",
+                                            "name": "main_wp",
+                                            "aria-label": "",
+                                            "type": "true_false",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "message": "",
+                                            "default_value": 0,
+                                            "allow_in_bindings": 0,
+                                            "ui": 0,
+                                            "ui_on_text": "",
+                                            "ui_off_text": ""
+                                        },
+                                        {
                                             "key": "field_6a7b6f1c19ec1",
                                             "label": "Secondary cta",
                                             "name": "secondary_cta",
@@ -172,6 +193,27 @@
                                             },
                                             "return_format": "array",
                                             "allow_in_bindings": 0
+                                        },
+                                        {
+                                            "key": "field_6a930f73ef33e",
+                                            "label": "Secondary wp",
+                                            "name": "secondary_wp",
+                                            "aria-label": "",
+                                            "type": "true_false",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "message": "",
+                                            "default_value": 0,
+                                            "allow_in_bindings": 0,
+                                            "ui": 0,
+                                            "ui_on_text": "",
+                                            "ui_off_text": ""
                                         }
                                     ]
                                 },
@@ -867,6 +909,27 @@
                                     },
                                     "return_format": "array",
                                     "allow_in_bindings": 0
+                                },
+                                {
+                                    "key": "field_6a931004de466",
+                                    "label": "cta wp",
+                                    "name": "cta_wp",
+                                    "aria-label": "",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "allow_in_bindings": 0,
+                                    "ui": 0,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
                                 }
                             ]
                         }
@@ -1766,5 +1829,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1787961532
+    "modified": 1788022882
 }

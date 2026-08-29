@@ -40,12 +40,12 @@ $ctas = $hero['call_to_actions'];
           <?php endif; if(!empty($ctas['main_cta']) || !empty($ctas['secondary_cta'])): ?>
             <ul class="call-to-actions">
               <li>
-                <a href="<?= $ctas['main_cta']['url']; ?>" data-aos="fade-right" target="<?= $ctas['main_cta']['target'] ?? '_self'; ?>" class="call-to-action primary">
+                <a href="<?= $ctas['main_cta']['url']; ?>" data-aos="fade-right" target="<?= $ctas['main_cta']['target'] ?? '_self'; ?>" class="call-to-action primary <?php if($ctas['main_wp'] === true): ?>whatsapp-chat<?php endif; ?>">
                   <?= $ctas['main_cta']['title']; ?>
                 </a>
               </li>
               <li>
-                <a href="<?= $ctas['secondary_cta']['url']; ?>" data-aos="fade-left" target="<?= $ctas['secondary_cta']['target'] ?? '_self'; ?>" class="call-to-action secondary">
+                <a href="<?= $ctas['secondary_cta']['url']; ?>" data-aos="fade-left" target="<?= $ctas['secondary_cta']['target'] ?? '_self'; ?>" class="call-to-action secondary <?php if($ctas['secondary_wp'] === true): ?>whatsapp-chat<?php endif; ?>">
                   <?= $ctas['secondary_cta']['title']; ?>
                 </a>
               </li>

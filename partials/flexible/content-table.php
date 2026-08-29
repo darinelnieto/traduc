@@ -46,7 +46,7 @@ if($t_content['table']):
             </table>
         </div>
         <?php if(!empty($t_content['call_to_action'])): $cat = $t_content['call_to_action']; ?>
-            <a href="<?= $cat['url']; ?>" target="<?= $cat['target']; ?>" class="call-to-action primary mt-4" data-aos="fade-up">
+            <a href="<?= $cat['url']; ?>" target="<?= $cat['target']; ?>" class="call-to-action primary mt-4 <?php if($t_content['cta_wp'] === true): ?>whatsapp-chat<?php endif; ?>" data-aos="fade-up">
                 <?= $cat['title']; ?>
             </a>
         <?php endif; ?>

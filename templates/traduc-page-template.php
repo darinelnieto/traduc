@@ -16,6 +16,7 @@ get_header();
     <?php get_template_part('partials/home/section-sm'); ?>
     <?php get_template_part('partials/home/section--cream'); ?>
     <?php get_template_part('partials/home/section-services'); ?>
+    <?php get_template_part('partials/home/customers-section'); ?>
     <?php get_template_part('partials/home/metricas'); ?>
     <?php get_template_part('partials/home/about'); ?>
     <?php get_template_part('partials/home/testimonial'); ?>

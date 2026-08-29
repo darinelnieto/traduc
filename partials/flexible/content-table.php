@@ -21,9 +21,9 @@ if($t_content['table']):
 <section class="content-table-partial-b0c8c4 section section--cream">
     <div class="wrap">
         <?php if(!empty($t_content['title'])): ?>
-            <h2 class="section__h2"><?= $t_content['title']; ?></h2>
+            <h2 class="section__h2" data-aos="fade-right"><?= $t_content['title']; ?></h2>
         <?php endif; ?>
-        <div class="table-scroll" role="region" aria-label="Tabla con desplazamiento horizontal">
+        <div class="table-scroll" role="region" aria-label="Tabla con desplazamiento horizontal" data-aos="zoom-in">
             <table class="table full-width table-striped table-hover">
                 <?php if(!empty($t_content['thead'])): ?>
                     <thead>
@@ -46,7 +46,7 @@ if($t_content['table']):
             </table>
         </div>
         <?php if(!empty($t_content['call_to_action'])): $cat = $t_content['call_to_action']; ?>
-            <a href="<?= $cat['url']; ?>" target="<?= $cat['target']; ?>" class="call-to-action primary mt-4">
+            <a href="<?= $cat['url']; ?>" target="<?= $cat['target']; ?>" class="call-to-action primary mt-4" data-aos="fade-up">
                 <?= $cat['title']; ?>
             </a>
         <?php endif; ?>

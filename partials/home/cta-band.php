@@ -37,7 +37,7 @@ if (empty($band)) {
         </div>
         <?php if(!empty($band['link'])): ?>
             <div class="cta-band__right" data-aos="fade-left">
-                <a href="<?= $band['link']['url']; ?>" target="<?= $band['link']['target'] ?? '_self'; ?>" class="btn btn--terra btn--lg btn-arrow"><?= $band['link']['title'] ?? 'Solicitar cotización'; ?></a>
+                <a href="<?= $band['link']['url']; ?>" target="<?= $band['link']['target'] ?? '_self'; ?>" class="btn btn--terra btn--lg btn-arrow <?php if($band['cta_wp'] === true): ?>whatsapp-chat<?php endif; ?>"><?= $band['link']['title'] ?? 'Solicitar cotización'; ?></a>
             </div>
         <?php endif; ?>
       </div>

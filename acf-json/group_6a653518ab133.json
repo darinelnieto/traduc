@@ -1155,6 +1155,27 @@
                                     },
                                     "return_format": "array",
                                     "allow_in_bindings": 0
+                                },
+                                {
+                                    "key": "field_6a9312f9fda41",
+                                    "label": "cta wp",
+                                    "name": "cta_wp",
+                                    "aria-label": "",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "message": "",
+                                    "default_value": 0,
+                                    "allow_in_bindings": 0,
+                                    "ui": 0,
+                                    "ui_on_text": "",
+                                    "ui_off_text": ""
                                 }
                             ]
                         }
@@ -1829,5 +1850,5 @@
     "display_title": "",
     "allow_ai_access": false,
     "ai_description": "",
-    "modified": 1788022882
+    "modified": 1788023598
 }

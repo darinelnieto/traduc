@@ -1,9 +1,9 @@
 <?php
 $script_handle = 'header-js';
-$script_version = filemtime(get_template_directory() . '/js/partials/header.js');
+$script_version = filemtime(get_template_directory() . '/js/partials-min/header.min.js');
 wp_enqueue_script(
     $script_handle,
-    get_template_directory_uri() . '/js/partials/header.js',
+    get_template_directory_uri() . '/js/partials-min/header.min.js',
     array('jquery'),
     $script_version,
     true

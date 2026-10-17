@@ -113,7 +113,7 @@ function gtag_report_conversion(url) {
         if (!redirected) {
             redirected = true;
             if (typeof url !== 'undefined' && url) {
-                window.location.href = url;
+                window.open(url, '_blank');
             }
         }
     }

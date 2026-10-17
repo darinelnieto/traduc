@@ -103,28 +103,34 @@ if (navAs.length) {
 // Call to action event
 $('.whatsapp-chat').on('click', function(e){
 	e.preventDefault();
-    
-    var url = $(this).attr('href');
+    var destinationUrl = $(this).attr('href');
+    gtag_report_conversion(destinationUrl);
+});
+function gtag_report_conversion(url) {
     var redirected = false;
 
     function navigate() {
         if (!redirected) {
             redirected = true;
-            window.location.href = url;
+            if (typeof url !== 'undefined' && url) {
+                window.location.href = url;
+            }
         }
     }
 
-    var timer = setTimeout(navigate, 100);
+    // Temporizador de respaldo por si la red retrasa el callback
+    var timer = setTimeout(navigate, 500);
 
-    gtag('event', 'click_whatsapp', {
-        'event_category': 'WhatsApp',
-        'event_label': 'Boton WhatsApp',
-        'page_location': window.location.href,
+    gtag('event', 'conversion', {
+        'send_to': 'AW-18345180587/MGqVCIbj_J8dEKv71KtE',
+        'value': 1.0,
+        'currency': 'COP',
         'transport': 'beacon',
-        'value': 1,
-        'event_callback': function() {
+        'event_callback': function () {
             clearTimeout(timer);
             navigate();
         }
     });
-});
+
+    return false;
+}

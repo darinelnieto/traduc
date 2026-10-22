@@ -28,7 +28,7 @@ $cta = get_field('sticky_link', 'option');
         <div>
           <div class="footer__logo"><?= $logo ?? ''; ?></div>
           <p class="footer__tagline"><?= $intro ?? ''; ?></p>
-          <a href="<?= $cta['url'] ?? '#contacto'; ?>" class="btn btn--terra" style="font-size:13px;padding:10px 20px">
+          <a href="<?= $cta['url'] ?? '#contacto'; ?>" class="btn btn--terra whatsapp-chat" style="font-size:13px;padding:10px 20px">
             <?= $cta['title'] ?? 'Solicitar cotización'; ?> →
           </a>
         </div>
@@ -55,5 +55,5 @@ $cta = get_field('sticky_link', 'option');
     </div>
 </section>
 <div class="sticky-cta show" id="stickyCta">
-    <a href="#contacto"><span class="sticky-dot"></span>Solicitar cotización</a>
+    <a href="<?= $cta['url'] ?? '#contacto'; ?>" class="whatsapp-chat"><span class="sticky-dot"></span>Solicitar cotización</a>
 </div>    

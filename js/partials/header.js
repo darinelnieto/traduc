@@ -116,7 +116,7 @@ function gtag_report_conversion(url) {
                 window.open(url, '_blank');
             }
         }
-    }
+    }s
 
     // Temporizador de respaldo por si la red retrasa el callback
     var timer = setTimeout(navigate, 500);

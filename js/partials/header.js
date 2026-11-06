@@ -100,37 +100,19 @@ if (navAs.length) {
         });
     });
 }
-// Call to action event
-$('.whatsapp-chat').on('click', function(e){
-	e.preventDefault();
-    var destinationUrl = $(this).attr('href');
-    gtag_report_conversion(destinationUrl);
+// Call to action event: conversión de Google Ads en clics a WhatsApp.
+// No se bloquea la navegación: 'beacon' envía el evento aunque la página cambie.
+document.addEventListener('click', function(e){
+    const link = e.target.closest('a.whatsapp-chat, a[href*="wa.link"], a[href*="wa.me"], a[href*="api.whatsapp.com"]');
+    if (!link) return;
+    gtag_report_conversion();
 });
-function gtag_report_conversion(url) {
-    var redirected = false;
-
-    function navigate() {
-        if (!redirected) {
-            redirected = true;
-            if (typeof url !== 'undefined' && url) {
-                window.open(url, '_blank');
-            }
-        }
-    }s
-
-    // Temporizador de respaldo por si la red retrasa el callback
-    var timer = setTimeout(navigate, 500);
-
+function gtag_report_conversion() {
+    if (typeof gtag !== 'function') return;
     gtag('event', 'conversion', {
         'send_to': 'AW-18345180587/MGqVCIbj_J8dEKv71KtE',
         'value': 1.0,
         'currency': 'COP',
-        'transport': 'beacon',
-        'event_callback': function () {
-            clearTimeout(timer);
-            navigate();
-        }
+        'transport_type': 'beacon'
     });
-
-    return false;
 }

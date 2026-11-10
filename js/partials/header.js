@@ -100,12 +100,30 @@ if (navAs.length) {
         });
     });
 }
-// Call to action event: conversión de Google Ads en clics a WhatsApp.
-// No se bloquea la navegación: 'beacon' envía el evento aunque la página cambie.
+// Abre el chat de Atiende (plugin "Agente Virtual"). El plugin solo inserta widget.js del motor,
+// que crea un Shadow DOM abierto en [data-agent-widget] con el botón flotante (.btn) y el panel (.panel).
+// No hay API pública, así que se reutiliza el botón flotante para abrirlo (carga el iframe y mantiene su estado).
+// Devuelve false si el widget no está disponible (licencia inactiva, aún cargando, etc.).
+function openAtiendeChat() {
+    const host = document.querySelector('[data-agent-widget]');
+    const root = host && host.shadowRoot;
+    const btn = root && root.querySelector('.btn');
+    const panel = root && root.querySelector('.panel');
+    if (!btn || !panel) return false;
+    if (!panel.classList.contains('open')) btn.click();
+    return true;
+}
+
+// Call to action: los .whatsapp-chat abren el chat de Atiende en vez de WhatsApp.
+// Si el widget no está, se respeta el enlace original (WhatsApp) como respaldo.
+// Se mantiene la conversión de Google Ads; 'beacon' la envía aunque la página cambie.
 document.addEventListener('click', function(e){
     const link = e.target.closest('a.whatsapp-chat, a[href*="wa.link"], a[href*="wa.me"], a[href*="api.whatsapp.com"]');
     if (!link) return;
     gtag_report_conversion();
+    if (link.classList.contains('whatsapp-chat') && openAtiendeChat()) {
+        e.preventDefault();
+    }
 });
 function gtag_report_conversion() {
     if (typeof gtag !== 'function') return;

@@ -54,6 +54,6 @@ $cta = get_field('sticky_link', 'option');
       </div>
     </div>
 </section>
-<div class="sticky-cta show" id="stickyCta">
+<!-- <div class="sticky-cta show" id="stickyCta">
     <a href="<?= $cta['url'] ?? '#contacto'; ?>" class="whatsapp-chat"><span class="sticky-dot"></span>Solicitar cotización</a>
-</div>    
+</div>     -->
